@@ -1,0 +1,57 @@
+﻿@model GeckoTracker.Models.GeckoDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Gecko Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.GeckoID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeckoID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeckoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeckoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeckoSexIsMale)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeckoSexIsMale)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GeckoWeight)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GeckoWeight)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HatchDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HatchDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.GeckoID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

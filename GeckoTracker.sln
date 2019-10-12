@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29306.81
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTracker.WebMVC", "GeckoTracker.WebMVC\GeckoTracker.WebMVC.csproj", "{85D1C273-7EE4-4D88-9595-631798CCEC03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTracker.Data", "GT.Data\GeckoTracker.Data.csproj", "{0E94869B-6AD3-419B-B703-03A1DAB607A4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTracker.Models", "GeckoTracker.Models\GeckoTracker.Models.csproj", "{170B4D01-FFA7-40CA-811F-8E2452A47184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTracker.Contracts", "GeckoTracker.Contracts\GeckoTracker.Contracts.csproj", "{163BDF13-45A8-4AC9-8FDA-FA1E33F459FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GeckoTracker.Services", "GeckoTracker.Services\GeckoTracker.Services.csproj", "{C754A847-2E93-4BCD-BA0B-8A726DED9890}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{85D1C273-7EE4-4D88-9595-631798CCEC03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85D1C273-7EE4-4D88-9595-631798CCEC03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85D1C273-7EE4-4D88-9595-631798CCEC03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85D1C273-7EE4-4D88-9595-631798CCEC03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0E94869B-6AD3-419B-B703-03A1DAB607A4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0E94869B-6AD3-419B-B703-03A1DAB607A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0E94869B-6AD3-419B-B703-03A1DAB607A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0E94869B-6AD3-419B-B703-03A1DAB607A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{170B4D01-FFA7-40CA-811F-8E2452A47184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{170B4D01-FFA7-40CA-811F-8E2452A47184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{170B4D01-FFA7-40CA-811F-8E2452A47184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{170B4D01-FFA7-40CA-811F-8E2452A47184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{163BDF13-45A8-4AC9-8FDA-FA1E33F459FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{163BDF13-45A8-4AC9-8FDA-FA1E33F459FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{163BDF13-45A8-4AC9-8FDA-FA1E33F459FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{163BDF13-45A8-4AC9-8FDA-FA1E33F459FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C754A847-2E93-4BCD-BA0B-8A726DED9890}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C754A847-2E93-4BCD-BA0B-8A726DED9890}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C754A847-2E93-4BCD-BA0B-8A726DED9890}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C754A847-2E93-4BCD-BA0B-8A726DED9890}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C61215A-13B0-4C11-A953-C6DF91C90D39}
+	EndGlobalSection
+EndGlobal

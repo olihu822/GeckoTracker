@@ -1,0 +1,57 @@
+﻿@model GeckoTracker.Models.LoanDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Loan Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanedGeckoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanedGeckoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LeaseeName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LeaseeName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LoanDuration)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LoanDuration)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.LoanID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

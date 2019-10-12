@@ -1,0 +1,42 @@
+﻿@model GeckoTracker.Models.PairingDetail
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Pairing Details</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MaleGeckoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MaleGeckoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.FemaleGeckoName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FemaleGeckoName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PairingID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

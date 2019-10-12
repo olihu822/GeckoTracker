@@ -1,0 +1,51 @@
+﻿@model IEnumerable<GeckoTracker.Models.LoanListView>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanedGeckoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LeaseeName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LoanDuration)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanedGeckoName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LeaseeName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LoanDuration)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.LoanID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.LoanID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.LoanID })
+        </td>
+    </tr>
+}
+
+</table>

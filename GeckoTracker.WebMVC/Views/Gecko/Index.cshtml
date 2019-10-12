@@ -1,0 +1,63 @@
+﻿@model IEnumerable<GeckoTracker.Models.GeckoListView>
+
+@{
+    ViewBag.Title = "Gecko List";
+}
+
+<h2>Gecko List</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success fade in" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.GeckoName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeckoSexIsMale)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GeckoWeight)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HatchDate)
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeckoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeckoSexIsMale)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.GeckoWeight)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HatchDate)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.GeckoID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.GeckoID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.GeckoID })
+            </td>
+        </tr>
+    }
+
+</table>
