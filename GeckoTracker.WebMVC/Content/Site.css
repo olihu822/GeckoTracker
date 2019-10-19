@@ -1,14 +1,19 @@
-﻿
-/*deleting this isnt fixing the whitespace at the top of the view */
-body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+.cover {
+    background-image: url('../Assets/homeIndex.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 

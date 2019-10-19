@@ -1,0 +1,17 @@
+﻿body {
+    margin:0;
+    padding:0;
+    width:100vw;
+    height:100vh;
+}
+
+.cover {
+    background-color: aquamarine;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

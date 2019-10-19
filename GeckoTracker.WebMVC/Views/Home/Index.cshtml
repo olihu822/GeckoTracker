@@ -2,20 +2,75 @@
     ViewBag.Title = "Home";
 }
 
+@section head{
+    <style type="text/css">
+        body {
+            background-image: url('Assets/homeIndex.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+
+        .jumbotron {
+            background-size: cover;
+            background-color: #bbf883;
+            border:double;
+            opacity:0.85;
+        }
+
+        .frontgecko {
+            float:right;
+            top: 3em;
+            right: 16em;
+        }
+        
+        .row{
+            background-color:gray;
+            opacity:0.7;
+            border-radius:50px;
+            color:whitesmoke;
+        }
+
+        .btn{
+            color:whitesmoke;
+        }
+
+    </style>
+}
+
 <div class="jumbotron">
     <h1>GeckoRegister</h1>
-    <p class="lead">Welcome to the GeckoRegister! As of now we are working to help crested gecko breeders keep track of their geckos and breeding projects. I hope to soon open up the register to casual gecko owners as well, so every gecko can have a family tree!</p>
+    <div class="frontgecko">
+        <img src="Assets/cleargecko.png" alt="crestie" width="200" height="200" />
+    </div>
+    <br />
+    <p class="lead">
+        Welcome to the GeckoRegister! As of now we are working to help crested gecko breeders keep track of their geckos and breeding projects. I hope to soon open up the register to casual gecko owners as well, so every gecko can have a family tree!
+    </p>
 </div>
 
+
 <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 text-center">
         <h2>Crested Gecko Information</h2>
         <p>Some background on the crested gecko.</p>
-        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://en.wikipedia.org/wiki/Crested_gecko">Learn more &raquo;</a></p>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-6 text-center">
+        <h2>Morph Guide</h2>
+        <p>Visual guide to different crested gecko morphs.</p>
+        <p><a class="btn btn-default" href="https://www.pangeareptile.com/store/crested-gecko-morph-guide.html">Learn more &raquo;</a></p>
+    </div>
+    <div class="col-md-4 text-center">
+    </div>
+    <div class="col-md-4 text-center">
         <h2>Crested Gecko Care</h2>
         <p>Links to information about the care of cresties.</p>
-        <p><a class="btn btn-default" href="">Learn more &raquo;</a></p>
+        <p><a class="btn btn-default" href="https://www.pangeareptile.com/store/crested-gecko-care-sheet-en.html">Learn more &raquo;</a></p>
     </div>
 </div>

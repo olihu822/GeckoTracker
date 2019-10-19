@@ -25,7 +25,7 @@ namespace GeckoTracker.Models
         public double GeckoWeight { get; set; }
 
         [Required]
-        [Display(Name = "Hatch Date: (dd/mm/yyyy)")]
+        [Display(Name = "Hatch Date: (mm/dd/yyyy)")]
         public string HatchDate { get; set; }
     }
 }

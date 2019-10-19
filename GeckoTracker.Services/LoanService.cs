@@ -19,6 +19,12 @@ namespace GeckoTracker.Services
             _userID = userID;
         }
 
+        public static void Date()
+        {
+            DateTime date1 = new DateTime();
+            Console.WriteLine(date1.ToString("d"));
+        }
+
         public IEnumerable<LoanListView> GetLoans()
         {
             using (var ctx = new ApplicationDbContext())
@@ -26,21 +32,21 @@ namespace GeckoTracker.Services
                 var query =
                     ctx
                         .Loans
-                        .Where(e => e.OwnerID == _userID)
-                        .Select(
-                        e =>
-                        new LoanListView
-                        {
-                            LoanID = e.LoanID,
-                            LoanedGeckoID = e.LoanedGecko.GeckoID,
-                            LoanedGeckoName = e.LoanedGecko.GeckoName,
-                            LeaseeName = e.LeaseeName,
-                            LoanStart = e.LoanStart,
-                            LoanDuration = e.LoanDuration
-                        }
-                        );
-
-                return query.ToArray();
+                        .Where(e => e.OwnerID == _userID).ToList();
+                List<LoanListView> loans = new List<LoanListView>();
+                foreach (var loan in query)
+                {
+                    loans.Add(new LoanListView
+                    {
+                        LoanID = loan.LoanID,
+                        LoanedGeckoID = loan.LoanedGecko.GeckoID,
+                        LoanedGeckoName = loan.LoanedGecko.GeckoName,
+                        LeaseeName = loan.LeaseeName,
+                        LoanStart = loan.LoanStart.ToString("d"),
+                        LoanDuration = loan.LoanDuration
+                    });
+                }
+                return loans;
             }
         }
 
@@ -57,7 +63,7 @@ namespace GeckoTracker.Services
                     {
                         LoanID = loanEntity.LoanID,
                         LoanedGeckoID = loanEntity.LoanedGeckoID,
-                        LoanedGeckoName = loanEntity.LoanedGeckoName,
+                        LoanedGeckoName = loanEntity.LoanedGecko.GeckoName,
                         LeaseeName = loanEntity.LeaseeName,
                         LoanStart = loanEntity.LoanStart,
                         LoanDuration = loanEntity.LoanDuration

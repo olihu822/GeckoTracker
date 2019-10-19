@@ -21,7 +21,7 @@ namespace GeckoTracker.Models
         public string LeaseeName { get; set; }
 
         [Display(Name = "Loan Start Date")]
-        public DateTime LoanStart { get; set; }
+        public string LoanStart { get; set; }
 
         [Display(Name = "Loan Duration")]
         public string LoanDuration { get; set; }

@@ -16,7 +16,7 @@ namespace GeckoTracker.WebMVC.Controllers
             var userID = Guid.Parse(User.Identity.GetUserId());
             var service = new LoanService(userID);
             var model = service.GetLoans();
-
+            
             return View(model);
         }
 

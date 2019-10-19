@@ -4,7 +4,18 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Loans Index</h2>
+
+@if (TempData.ContainsKey("SaveResult"))
+{
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+
+        <button type="button" class="close" data-dismiss="alert">
+            <span>&times;</span>
+        </button>
+        @TempData["SaveResult"]
+    </div>
+}
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -26,26 +37,27 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoanedGeckoName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LeaseeName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoanStart)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.LoanDuration)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.LoanID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.LoanID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.LoanID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanedGeckoName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LeaseeName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanStart)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LoanDuration)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.LoanID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.LoanID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.LoanID })
+            </td>
+        </tr>
+    }
 
 </table>
