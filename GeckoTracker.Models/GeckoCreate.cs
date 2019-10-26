@@ -20,7 +20,7 @@ namespace GeckoTracker.Models
         public bool GeckoSexIsMale { get; set; }
 
         [Required]
-        [Range(2, 10000)]
+        [Range(2, 1000)]
         [Display(Name = "Weight of Gecko in grams (g)")]
         public double GeckoWeight { get; set; }
 

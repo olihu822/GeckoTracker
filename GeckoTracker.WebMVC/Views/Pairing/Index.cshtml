@@ -6,6 +6,35 @@
     ViewBag.Title = "Index";
 }
 
+@section head{
+    <style type="text/css">
+        tr:nth-child(even) {
+            background: #fbf9af
+        }
+
+        tr:nth-child(odd) {
+            background: #c4c1c1
+        }
+
+        tr {
+            border: double;
+        }
+
+        body {
+            background-image: url('Assets/leaves.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            margin: 0;
+        }
+    </style>
+}
+
+
 <h2>Pairings Index</h2>
 
 @if (TempData.ContainsKey("SaveResult"))
@@ -61,7 +90,7 @@
 <!--
     so we want to make things different colors, and then possibly make you able to add images
     if this one tutorial is good enough
-    add gecko pictures to the front page 
+    add gecko pictures to the front page
     possibly ones with no background? make it look sleek
     change centering?
 -->
